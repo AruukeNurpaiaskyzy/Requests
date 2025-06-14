@@ -1,6 +1,10 @@
 import requests 
 
+params = {"q" : "funny cats"}
 
-response = requests.get("https://www.google.com/")
-# print(response.status_code)
-print(response.headers)
+
+response = requests.get("https://www.google.com/", params=params)
+# # print(response.status_code)
+# print(response.headers)
+# print(response.content)
+print(response.text)
