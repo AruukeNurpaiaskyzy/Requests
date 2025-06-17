@@ -20,7 +20,7 @@ headers =  {
     "X-Amzn-Trace-Id": "Root=1-68517389-1656517e2f1090a42480db8c"
   }
 
-response = requests.get("https://httpbin.org/headers")
+response = requests.get("https://httpbin.org/headers", headers=headers)
 # print(response.status_code)
 # print(response.headers)
 # print(response.content)
