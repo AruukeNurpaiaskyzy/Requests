@@ -1,7 +1,7 @@
 import requests 
 from apikey import API_TOKEN
 
-params = {"q" : "Osh", "appid": API_TOKEN, "units": "metric"}
+data = {"q" : "Osh", "appid": API_TOKEN, "units": "metric"}
 
 headers =  {
     "Accept": "application/json",
@@ -20,7 +20,7 @@ headers =  {
     "X-Amzn-Trace-Id": "Root=1-68517389-1656517e2f1090a42480db8c"
   }
 
-response = requests.get("https://httpbin.org/headers", headers=headers)
+response = requests.get("https://httpbin.org/forms/post", headers=headers, data=data)
 # print(response.status_code)
 # print(response.headers)
 # print(response.content)
